@@ -24,13 +24,24 @@ export class BodyComponent {
   sumar() {
     this.resultado = this.cifra1 + this.cifra2;
   }
+
+  restar() {
+    this.resultado = this.cifra1 - this.cifra2;
+  }
+  
+  multiplicar() {
+    this.resultado = this.cifra1 * this.cifra2;
+  }
+  
+  dividir() {
+    this.resultado = this.cifra1 / this.cifra2;
+  }
   
   limpiar(){
     this.cifra1 = 0;
     this.cifra2 = 0;
     this.resultado = 0;
-    
-    // Limpiar los campos de entrada
+
     const cifra1Input = document.querySelector('input[placeholder="Cifra 1"]') as HTMLInputElement;
     const cifra2Input = document.querySelector('input[placeholder="Cifra 2"]') as HTMLInputElement;
     cifra1Input.value = '';
