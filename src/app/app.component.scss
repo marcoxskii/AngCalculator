@@ -1,3 +1,17 @@
 main{
-    background-color: rgb(31, 76, 160);
+    background-color: rgb(70, 108, 178);
+    height: 100vh;
+}
+
+app-body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+app-footer{
+    position: fixed;
+    bottom: 0;
+    width: 95%;
+    padding: 10px;
 }

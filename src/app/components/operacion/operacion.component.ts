@@ -43,6 +43,5 @@ export class OperacionComponent {
     }
   }
 
-  
 
 }

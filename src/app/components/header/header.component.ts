@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -9,5 +9,15 @@ import { RouterLink } from '@angular/router';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+  
+  usuario : string = "Estudiante"
+
+  tiempoConexion : string = ''
+  intervalo = 10
+
+  actualizar(segundos : number){
+    this.tiempoConexion = 'Conectado' + segundos + 'segundos'
+  }
+
 
 }
