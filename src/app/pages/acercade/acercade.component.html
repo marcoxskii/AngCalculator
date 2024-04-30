@@ -2,3 +2,15 @@
     <p>Bienvenido a la página "Acerca de" de nuestra calculadora en línea!</p>
     <p>Nuestra calculadora está diseñada para ayudarte a realizar operaciones matemáticas básicas de manera rápida y sencilla. Con las funciones de suma, resta, multiplicación y división, puedes realizar cálculos en cualquier momento y en cualquier lugar.</p>
     <p>¡Esperamos que encuentres nuestra calculadora útil y fácil de usar!</p>
+
+    <label for="txtMsg">Historial de Operaciones:</label>
+    <input id="txtMsg" name="txtMsg" [(ngModel)]="msg"/><br/>
+    <br/>
+    <button (click)="agregar()">Agregar</button>
+    <button (click)="limpiar()">Limpiar</button>
+
+    <ul>
+        @for(msg of messages; track msg){
+            <li>{{msg}}</li>
+        }
+    </ul>

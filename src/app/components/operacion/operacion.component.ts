@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { ContactosService } from '../../services/contactos.service';
 
 @Component({
   selector: 'app-operacion',
@@ -8,12 +9,23 @@ import { Component, Input } from '@angular/core';
   styleUrl: './operacion.component.scss'
 })
 export class OperacionComponent {
+  messages: string[] = []
+
   resultado: number = 0;
   @Input() operacion: string=""; 
   keys: string[] = ["0","1","2","3","4","5","6","7","8","9" ];  
   screen: string = "";
   cifras: string[] = [];
 
+  
+  constructor(private contactosService: ContactosService){
+
+  }
+
+  ngOnInit(){
+    this.messages = this.contactosService.get()
+  }
+  
   writeNumber(key: string){
     if ( key == this.operacion && (this.screen.includes(this.operacion) || this.screen.length == 0)){
       return;
@@ -50,5 +62,13 @@ export class OperacionComponent {
         break;
       }
     }
+    
+    this.contactosService.add(this.cifras[0] + this.operacion + this.cifras[1]+ "=" + this.resultado.toString())
   }
+
+  limpiar(){
+    this.contactosService.clear()
+    this.ngOnInit()
+  }
+
 }

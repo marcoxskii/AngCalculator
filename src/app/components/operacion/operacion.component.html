@@ -15,3 +15,16 @@
 
     <h3> El resultado es: {{resultado}} </h3>    
 </div>
+
+<div>
+    <label for="txtResultado">Historial de Operaciones:</label>
+    <br/>
+    <br>
+    <button class="btnClr" (click)="limpiar()">Limpiar</button>
+
+    <ul>
+        @for(msg of messages; track msg){
+            <li>{{msg}}</li>
+        }
+    </ul>
+</div>
