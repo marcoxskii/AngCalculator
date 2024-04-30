@@ -9,6 +9,5 @@ import { OperacionComponent } from '../../components/operacion/operacion.compone
   styleUrl: './suma.component.scss'
 })
 export class SumaComponent {
-  operacion: string = "Sumar";
-
+  operacion: string = "+";
 }

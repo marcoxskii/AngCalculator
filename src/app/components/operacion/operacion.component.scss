@@ -5,10 +5,17 @@ div{
 }
 
 button {
-    color: rgb(255, 255, 255);
-    background-color: rgb(244, 138, 0);
-    margin-bottom: 10px; 
-    max-width: 100px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 20px; 
+}
+
+button:hover {
+    background-color: #777;
 }
 
 input{
@@ -17,4 +24,33 @@ input{
 
 h3{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.keypad{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 8px;
+    padding: 1px;
+    max-width: 200px;
+    max-height: 250px;
+}
+
+.screen{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    height: 12px;
+    max-height: 50px;
+    width: 175px;
+}
+
+.header{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    max-width: 200px;
+    transform: translate(-4.5vw, 0);
+    align-items: center;
 }

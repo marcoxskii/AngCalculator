@@ -9,5 +9,5 @@ import { OperacionComponent } from '../../components/operacion/operacion.compone
   styleUrl: './multiplicacion.component.scss'
 })
 export class MultiplicacionComponent {
-  operacion: string = "Multiplicar";
+  operacion: string = "*";
 }
