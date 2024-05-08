@@ -15,4 +15,5 @@ import { SumaComponent } from './pages/suma/suma.component';
 })
 export class AppComponent {
   title = 'Marco Cjmr';
+  age = '19';
 }

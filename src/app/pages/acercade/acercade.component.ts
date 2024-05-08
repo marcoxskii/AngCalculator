@@ -14,7 +14,7 @@ export class AcercadeComponent {
 
   messages: string[] = []
 
-  contactosService: ContactosService = new ContactosService;
+  constructor(private contactosService: ContactosService){}
 
 
   ngOnInit(){

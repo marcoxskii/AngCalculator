@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { ContactosService } from '../../services/contactos.service';
+import { StringListService } from '../../services/string-list.service';
 
 @Component({
   selector: 'app-operacion',
@@ -18,12 +19,14 @@ export class OperacionComponent {
   cifras: string[] = [];
 
   
-  constructor(private contactosService: ContactosService){
+  constructor(private stringlistService: StringListService){
 
   }
 
+  
+
   ngOnInit(){
-    this.messages = this.contactosService.get()
+    this.messages = this.stringlistService.get()
   }
   
   writeNumber(key: string){
@@ -63,11 +66,11 @@ export class OperacionComponent {
       }
     }
     
-    this.contactosService.add(this.cifras[0] + this.operacion + this.cifras[1]+ "=" + this.resultado.toString())
+    this.stringlistService.add(this.cifras[0] + this.operacion + this.cifras[1]+ "=" + this.resultado.toString())
   }
 
   limpiar(){
-    this.contactosService.clear()
+    this.stringlistService.clear()
     this.ngOnInit()
   }
 
