@@ -16,4 +16,8 @@ export class PostService {
     return this.http.get('https://jsonplaceholder.typicode.com/photos')
   }
 
+  getAllComments(){
+    return this.http.get('https://jsonplaceholder.typicode.com/comments')
+  }
+
 }

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "frstprojectmkt": {
+      "hosting": {
+        "demo64": [
+          "frstprojectmkt"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "frstprojectmkt"
+  }
+}
