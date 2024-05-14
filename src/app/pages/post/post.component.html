@@ -10,8 +10,22 @@
                     <p><strong>url:</strong> {{msg.url}}</p>
                     <p><strong>thumbnailUrl:</strong> {{msg.thumbnailUrl}}</p>
                     <br>
+                    <button (click)="enviarPost(msg.title, msg.msg)">Enviar Post</button>
+
+                    <br>
                 </div>  
             }
         }
+
+        <ul>
+            @for(msg of mensaje; track msg.id){
+                
+                    <li><strong>{{msg.title}}</strong>: <span>{{msg.msg}}</span></li>
+                
+            }
+        </ul>
+
     </ul>
+
+    
 </div>

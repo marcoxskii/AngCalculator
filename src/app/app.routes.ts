@@ -6,6 +6,7 @@ import{ MultiplicacionComponent } from './pages/multiplicacion/multiplicacion.co
 import { HomeComponent } from './pages/home/home.component';
 import { AcercadeComponent } from './pages/acercade/acercade.component';
 import { PostComponent } from './pages/post/post.component';
+import { MensajesComponent } from './pages/mensajes/mensajes.component';
 
 
 
@@ -16,6 +17,7 @@ export const routes: Routes = [
     { path: 'division', component: DivisionComponent },
     { path: 'multiplicacion', component: MultiplicacionComponent},
     { path: 'post', component: PostComponent},
+    { path: 'mensajes', component: MensajesComponent},
     { path: 'acercaDe', component: AcercadeComponent}
     
 ];
